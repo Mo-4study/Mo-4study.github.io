@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #243447;
+    background-color: #f4f7fb;
+}
+
+header {
+    padding: 35px 20px;
+    text-align: center;
+    color: white;
+    background-color: #345995;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #263f70;
+}
+
+nav a {
+    padding: 14px 22px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #263f70;
+    background-color: white;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr) 250px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+main,
+aside {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #345995;
+    cursor: pointer;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #263f70;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
