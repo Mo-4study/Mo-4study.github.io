@@ -43,7 +43,9 @@ nav a {
     color: var(--text-dark);
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.2s, color 0.2s;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
 }
 
 nav a:hover,
@@ -79,13 +81,11 @@ h3 {
     padding-left: 22px;
 }
 
-.link-list a,
-footer a {
+.link-list a {
     color: var(--header-brown);
 }
 
-.link-list a:hover,
-footer a:hover {
+.link-list a:hover {
     text-decoration-thickness: 2px;
 }
 
@@ -137,18 +137,44 @@ button:focus {
     border-radius: 10px;
 }
 
+/* Footer */
+
 footer {
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
     color: var(--white);
     background-color: var(--header-brown);
 }
 
-footer a {
+footer p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-links a {
     color: var(--navbar-yellow);
 }
 
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--white);
+    text-decoration-thickness: 2px;
+}
+
+.footer-links span {
+    color: var(--white);
+}
+
 /* Portfolio table */
+
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -182,6 +208,7 @@ tbody tr:hover {
 }
 
 /* Trivia quiz */
+
 .question {
     margin: 20px 0;
     padding: 18px;
@@ -247,6 +274,8 @@ tbody tr:hover {
     border: 1px solid var(--navbar-yellow);
 }
 
+/* Responsive design */
+
 @media (max-width: 800px) {
     .page-layout {
         grid-template-columns: 1fr;
@@ -255,5 +284,14 @@ tbody tr:hover {
     nav {
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .footer-links span {
+        display: none;
     }
 }

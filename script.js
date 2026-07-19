@@ -35,13 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
         resultBox.className = "result-success";
 
         if (score === 3) {
-            resultBox.textContent = "Excellent! Your score is 3 out of 3.";
+            resultBox.textContent =
+                "Excellent! Your score is 3 out of 3.";
         } else if (score === 2) {
-            resultBox.textContent = "Good job! Your score is 2 out of 3.";
+            resultBox.textContent =
+                "Good job! Your score is 2 out of 3.";
         } else if (score === 1) {
-            resultBox.textContent = "Your score is 1 out of 3. Please try again.";
+            resultBox.textContent =
+                "Your score is 1 out of 3. Please try again.";
         } else {
-            resultBox.textContent = "Your score is 0 out of 3. Please review the topics.";
+            resultBox.textContent =
+                "Your score is 0 out of 3. Please review the topics.";
         }
     });
 

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Trivia | CHEN Hao</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>CHEN Hao's Personal Website</h1>
@@ -21,42 +24,165 @@
     <div class="page-layout">
         <aside>
             <h2>Useful Links</h2>
+
             <ul class="link-list">
-                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-                <li><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">CodePen</a></li>
-                <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a></li>
+                <li>
+                    <a
+                        href="https://developer.mozilla.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        MDN Web Docs
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.w3schools.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        W3Schools
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://codepen.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CodePen
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://stackoverflow.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Stack Overflow
+                    </a>
+                </li>
             </ul>
         </aside>
 
         <main>
             <h2>Computer Trivia Quiz</h2>
-            <p>Answer all three questions and click the button to calculate your score.</p>
+
+            <p>
+                Answer all three questions and click the button
+                to calculate your score.
+            </p>
 
             <form id="quiz-form">
                 <section class="question">
                     <h3>1. What does HTML stand for?</h3>
-                    <label><input type="radio" name="q1" value="correct"> HyperText Markup Language</label>
-                    <label><input type="radio" name="q1" value="wrong"> High Transfer Machine Language</label>
-                    <label><input type="radio" name="q1" value="wrong"> Home Tool Markup Language</label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="correct"
+                        >
+                        HyperText Markup Language
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="wrong"
+                        >
+                        High Transfer Machine Language
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="wrong"
+                        >
+                        Home Tool Markup Language
+                    </label>
                 </section>
 
                 <section class="question">
-                    <h3>2. Which language is mainly used to style a webpage?</h3>
-                    <label><input type="radio" name="q2" value="wrong"> Python</label>
-                    <label><input type="radio" name="q2" value="correct"> CSS</label>
-                    <label><input type="radio" name="q2" value="wrong"> SQL</label>
+                    <h3>
+                        2. Which language is mainly used to style
+                        a webpage?
+                    </h3>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="wrong"
+                        >
+                        Python
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="correct"
+                        >
+                        CSS
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="wrong"
+                        >
+                        SQL
+                    </label>
                 </section>
 
                 <section class="question">
-                    <h3>3. Which language can add interactive behavior to a webpage?</h3>
-                    <label><input type="radio" name="q3" value="wrong"> XML</label>
-                    <label><input type="radio" name="q3" value="wrong"> CSS</label>
-                    <label><input type="radio" name="q3" value="correct"> JavaScript</label>
+                    <h3>
+                        3. Which language can add interactive
+                        behavior to a webpage?
+                    </h3>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="wrong"
+                        >
+                        XML
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="wrong"
+                        >
+                        CSS
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="correct"
+                        >
+                        JavaScript
+                    </label>
                 </section>
 
-                <button type="button" id="check-button">Check Answers</button>
-                <button type="button" id="reset-button">Reset Quiz</button>
+                <button type="button" id="check-button">
+                    Check Answers
+                </button>
+
+                <button type="button" id="reset-button">
+                    Reset Quiz
+                </button>
             </form>
 
             <div id="quiz-result" aria-live="polite"></div>
@@ -64,15 +190,31 @@
 
         <aside>
             <h2>Contact Me</h2>
+
             <form action="#">
                 <label for="trivia-name">Name</label>
-                <input id="trivia-name" name="name" type="text" required>
+                <input
+                    id="trivia-name"
+                    name="name"
+                    type="text"
+                    required
+                >
 
                 <label for="trivia-email">Email</label>
-                <input id="trivia-email" name="email" type="email" required>
+                <input
+                    id="trivia-email"
+                    name="email"
+                    type="email"
+                    required
+                >
 
                 <label for="trivia-message">Message</label>
-                <textarea id="trivia-message" name="message" rows="5" required></textarea>
+                <textarea
+                    id="trivia-message"
+                    name="message"
+                    rows="5"
+                    required
+                ></textarea>
 
                 <button type="submit">Send</button>
             </form>
@@ -81,9 +223,26 @@
 
     <footer>
         <p>Created in July 2026</p>
-        <a href="https://github.com/Mo-4study"
-           target="_blank"
-           rel="noopener noreferrer">My GitHub</a>
+
+        <div class="footer-links">
+            <a
+                href="https://github.com/Mo-4study"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                My GitHub
+            </a>
+
+            <span aria-hidden="true">|</span>
+
+            <a
+                href="https://www.ritsumei.ac.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Ritsumeikan University
+            </a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
