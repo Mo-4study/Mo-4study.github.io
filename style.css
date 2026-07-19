@@ -2,36 +2,54 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-brown: #7A5C45;
+    --navbar-yellow: #F2CE72;
+    --cream-background: #FDF7EA;
+    --card-border: #EFE3CC;
+    --text-dark: #4B3A2E;
+    --white: #FFFFFF;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #243447;
-    background-color: #f4f7fb;
+    color: var(--text-dark);
+    background-color: var(--cream-background);
 }
 
 header {
     padding: 35px 20px;
     text-align: center;
-    color: white;
-    background-color: #345995;
+    color: var(--white);
+    background-color: var(--header-brown);
+}
+
+header h1 {
+    margin-top: 0;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #263f70;
+    flex-wrap: wrap;
+    background-color: var(--navbar-yellow);
+    border-bottom: 1px solid var(--card-border);
 }
 
 nav a {
     padding: 14px 22px;
-    color: white;
+    color: var(--text-dark);
+    font-weight: bold;
     text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-nav a:hover {
-    color: #263f70;
-    background-color: white;
+nav a:hover,
+nav a:focus {
+    color: var(--white);
+    background-color: var(--header-brown);
 }
 
 .page-layout {
@@ -46,8 +64,29 @@ nav a:hover {
 main,
 aside {
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
+    border: 1px solid var(--card-border);
     border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(122, 92, 69, 0.06);
+}
+
+h2,
+h3 {
+    color: var(--header-brown);
+}
+
+.link-list {
+    padding-left: 22px;
+}
+
+.link-list a,
+footer a {
+    color: var(--header-brown);
+}
+
+.link-list a:hover,
+footer a:hover {
+    text-decoration-thickness: 2px;
 }
 
 form {
@@ -61,14 +100,32 @@ button {
     width: 100%;
     padding: 10px;
     font: inherit;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    border: 1px solid var(--card-border);
+    background-color: #FFFDF8;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--navbar-yellow);
+    border-color: var(--header-brown);
 }
 
 button {
     border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: #345995;
+    color: var(--white);
+    background-color: var(--header-brown);
     cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    color: var(--text-dark);
+    background-color: var(--navbar-yellow);
 }
 
 .profile-image {
@@ -76,18 +133,118 @@ button {
     width: 100%;
     max-width: 400px;
     margin: 15px auto;
+    border: 1px solid var(--card-border);
     border-radius: 10px;
 }
 
 footer {
     padding: 20px;
     text-align: center;
-    color: white;
-    background-color: #263f70;
+    color: var(--white);
+    background-color: var(--header-brown);
 }
 
 footer a {
-    color: white;
+    color: var(--navbar-yellow);
+}
+
+/* Portfolio table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--card-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    color: var(--text-dark);
+    background-color: var(--navbar-yellow);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFF9ED;
+}
+
+tbody tr:hover {
+    background-color: #FFF1CC;
+}
+
+/* Trivia quiz */
+.question {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid var(--card-border);
+    border-left: 5px solid var(--header-brown);
+    border-radius: 8px;
+    background-color: #FFF9ED;
+}
+
+.question h3 {
+    margin-top: 0;
+}
+
+.question label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+#quiz-form button {
+    margin-top: 10px;
+}
+
+#reset-button {
+    color: var(--text-dark);
+    background-color: var(--navbar-yellow);
+}
+
+#reset-button:hover,
+#reset-button:focus {
+    color: var(--white);
+    background-color: var(--header-brown);
+}
+
+#quiz-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#quiz-result:empty {
+    display: none;
+}
+
+.result-success {
+    color: #46643D;
+    background-color: #EEF5E9;
+    border: 1px solid #CADBBF;
+}
+
+.result-warning {
+    color: #7A5C45;
+    background-color: #FFF1CC;
+    border: 1px solid var(--navbar-yellow);
 }
 
 @media (max-width: 800px) {

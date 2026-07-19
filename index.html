@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHEN Hao's Website</title>
+    <title>Home | CHEN Hao</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>CHEN Hao's Personal Website</h1>
@@ -22,21 +21,11 @@
     <div class="page-layout">
         <aside>
             <h2>Useful Links</h2>
-            <ul>
-                <li>
-                    <a href="https://developer.mozilla.org/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        MDN Web Docs
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.w3schools.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        W3Schools
-                    </a>
-                </li>
+            <ul class="link-list">
+                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                <li><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">CodePen</a></li>
+                <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a></li>
             </ul>
         </aside>
 
@@ -53,30 +42,31 @@
             </p>
 
             <p>
-                I am interested in artificial intelligence,
-                web development, natural language processing,
-                and game review analysis.
+                I am interested in artificial intelligence, web development,
+                natural language processing, and game review analysis.
             </p>
 
             <p>
-                My goal is to improve my programming and research
-                skills and apply information technology to practical
-                problems.
+                My goal is to improve my programming and research skills
+                and apply information technology to practical problems.
+            </p>
+
+            <p>
+                In my free time, I enjoy watching anime and playing football.
             </p>
         </main>
 
         <aside>
             <h2>Contact Me</h2>
+            <form action="#">
+                <label for="home-name">Name</label>
+                <input id="home-name" name="name" type="text" required>
 
-            <form>
-                <label for="name">Name</label>
-                <input id="name" type="text" required>
+                <label for="home-email">Email</label>
+                <input id="home-email" name="email" type="email" required>
 
-                <label for="email">Email</label>
-                <input id="email" type="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" required></textarea>
+                <label for="home-message">Message</label>
+                <textarea id="home-message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Send</button>
             </form>
@@ -87,9 +77,7 @@
         <p>Created in July 2026</p>
         <a href="https://github.com/Mo-4study"
            target="_blank"
-           rel="noopener noreferrer">
-            My GitHub
-        </a>
+           rel="noopener noreferrer">My GitHub</a>
     </footer>
 </body>
 </html>
